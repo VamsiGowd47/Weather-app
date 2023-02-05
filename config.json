@@ -1,0 +1,74 @@
+{
+  "city": [
+    {
+      "cityType": "Machilipatnam",
+      "cityID": "Machilipatnam",
+      "country": "India"
+    },
+    {
+      "cityType": "Vijayawada",
+      "cityID": "Vijayawada",
+      "country": "India"
+    },
+    {
+      "cityType": "Hyderabad",
+      "cityID": "Hyderabad",
+      "country": "India"
+    },
+    {
+      "cityType": "Chennai",
+      "cityID": "Chennai",
+      "country": "India"
+    },
+    {
+      "cityType": "Visakhapatnam",
+      "cityID": "Visakhapatnam",
+      "country": "India"
+    },
+    {
+      "cityType": "Delhi",
+      "cityID": "Delhi",
+      "country": "India"
+    },
+    {
+      "cityType": "Mumbai",
+      "cityID": "Mumbai",
+      "country": "India"
+    },
+    {
+      "cityType": "Banglore",
+      "cityID": "Banglore",
+      "country": "India"
+    },
+    {
+      "cityType": "Pune",
+      "cityID": "Pune",
+      "country": "India"
+    },
+    {
+      "cityType": "Tirupati",
+      "cityID": "Tirupati",
+      "country": "India"
+    },
+    {
+      "cityType": "Gudivada",
+      "cityID": "Gudivada",
+      "country": "India"
+    },
+    {
+      "cityType": "Mysore",
+      "cityID": "Mysore",
+      "country": "India"
+    },
+    {
+      "cityType": "Simla",
+      "cityID": "Simla",
+      "country": "India"
+    },
+    {
+      "cityType": "Ooty",
+      "cityID": "Ooty",
+      "country": "India"
+    }
+  ]
+}

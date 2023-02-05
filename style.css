@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #D8DADA;
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  width: auto;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.card {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  margin: 0 1% 20px;
+  padding: 20px;
+  border: 1px solid rgb(13, 12, 12);
+  border-radius: 50px;
+  box-sizing: border-box;
+  vertical-align: top;
+  background-color: aliceblue;
+  box-shadow: 5px 10px #888888;
+}
+
+.primary {
+  border-bottom: 1px solid #1261EC;
+  padding-bottom: 40px;
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.today {
+  width: auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+.cityName {
+  float: left;
+  font-size: 24px;
+}
+
+.delete-icon {
+  float: right;
+  border-radius: 5px;
+}
+
+.fa {
+  padding: 10px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+}
+
+#refreshBtn {
+  float: right;
+}
+
+.main-description {
+  float: right;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.temperature {
+  font-size: 36px;
+  margin: auto;
+  color: #CF4906;
+}
+
+.feelsLike {
+  font-weight: bold;
+}
+
+.sunrise {
+  float: left;
+  font-weight: bold;
+}
+
+.sunset {
+  float: right;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  .card {
+    width: 48%;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .card {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+  .button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+}
