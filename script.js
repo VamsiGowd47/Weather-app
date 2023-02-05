@@ -2,14 +2,14 @@ $(document).ready(function () {
   var citiesData = [];
   $.getJSON("config.json", function (jsonData) {
     $.each(jsonData.city, function (key, value) {
-      $("#dropDownCities").append("<option value='" + value.cityType + "'>" + value.cityType + "</option>");
+      $('#dropDownCities').append("<option value='" + value.cityType + "'>" + value.cityType + "</option>");
     });
   });
-  $("#add-button").click(function () {
-    var city = $("#dropDownCities").val();
+  $('#add-button').click(function () {
+    var city = $('#dropDownCities').val();
     var APIKey = "406167a207a39a18140010d47616a067";
     if (city === "") {
-      alert("Please select a city.");
+      alert("OH! Please select a city to know Weather Condition.......");
       return;
     }
     var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
@@ -22,7 +22,7 @@ $(document).ready(function () {
     }
 
     if (cityExists) {
-      alert("OOPS! City is already added");
+      alert("OOPS! City is already added.......");
     }
     else {
       $.getJSON(url, function (data) {
@@ -51,7 +51,7 @@ $(document).ready(function () {
           html += "<div class='card'>";
           html += "<div class='primary'>";
           html += "<div class='cityName'>" + citiesData[i].name + "," + citiesData[i].country + "</div>";
-          html += "<div class='delete-icon'><button class='fa fa-trash'></button></div>";
+          html += "<div class='delete-icon'><button class='fa fa-trash' id='" + citiesData[i].name + "'></button></div>";
           html += "</div>";
           html += "<div class='main-description'><img src='./Images/Description.png' alt='Description-image' width='100px' height='100px'/><p class='Description'>" + citiesData[i].weather.toLowerCase().replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase()) + "</p></div><div class='clearfix'></div>";
           html += "<p class='temperature'>" + citiesData[i].temp + "&nbsp;c" + "</p>";
@@ -64,17 +64,24 @@ $(document).ready(function () {
           $('#cityCards').append(html);
           $('.fa-trash').click(function () {
             $(this).closest('.card').remove();
+            var delbut = $(this).closest('.fa-trash').attr('id');
+            for (var i = 0; i < citiesData.length; i++) {
+              if (delbut == citiesData[i].name)
+                citiesData.splice(i, 1);
+            }
           });
         }
       });
     }
   });
-  $("#refreshBtn").click(function () {
+  $('#refreshBtn').click(function () {
     citiesData = [];
-    $("#cityCards").empty();
+    $('#cityCards').empty();
     $('.today').empty();
+    $('.today').append("<p>Do you want to add new cities? Let's start>>>>>>>>></p>");
   });
 
 });
 
 
+// obj[1].remove();
